@@ -10,6 +10,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "bootsnap", require: false
 gem "sassc-rails"
+gem "devise"
 
 group :development, :test do
   gem "sqlite3"
