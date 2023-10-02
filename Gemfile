@@ -25,6 +25,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   gem 'spring-commands-rspec'
+  gem "spring"
 end
 
 group :test do
@@ -36,5 +37,5 @@ end
 
 group :production do
   # Use postgresql as the database for Active Record
-  gem "pg", "~> 1.1"
+  gem "pg", "1.3.5"
 end
