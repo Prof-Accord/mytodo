@@ -11,6 +11,7 @@ gem "jbuilder"
 gem "bootsnap", require: false
 gem "sassc-rails"
 gem "devise"
+gem "faker"
 
 group :development, :test do
   gem "sqlite3"
