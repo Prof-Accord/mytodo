@@ -9,6 +9,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem "bootsnap", require: false
+gem "bootstrap-sass"
 gem "sassc-rails"
 gem "devise"
 gem "faker"
@@ -26,16 +27,22 @@ group :development do
   gem "web-console"
   gem 'spring-commands-rspec'
   gem "spring"
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'erb_lint', require: false
+  gem 'overcommit'
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :production do
   # Use postgresql as the database for Active Record
-  gem "pg", "1.3.5"
+  gem 'pg', '1.3.5'
 end
