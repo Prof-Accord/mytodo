@@ -33,6 +33,8 @@ group :development do
   gem 'rubocop-rspec', require: false
   gem 'erb_lint', require: false
   gem 'overcommit'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do

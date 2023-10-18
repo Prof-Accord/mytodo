@@ -4,12 +4,12 @@
   <a href='/static_pages/about'>こちら</a>
 </h2>
 
-<p>すでにユーザー登録されている方</p>
+<h4>すでにユーザー登録されている方</h4>
 <div>
   <%= button_to 'メールアドレスまたは電話番号でログイン', new_user_session_path, { method: :get, class: 'btn btn-lg btn-primary'} %>
 </div>
 
-<p>初めてご利用の方</p>
+<h4>初めてご利用の方</h4>
 <div>
   <%= button_to 'Mytodoユーザー登録', new_user_registration_path, { method: :get, class: 'btn btn-lg btn-primary'} %>
 </div>
