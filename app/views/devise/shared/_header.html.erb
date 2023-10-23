@@ -1,19 +1,19 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to 'Mytodo', root_path, id: "logo" %>
-      <% if user_signed_in? %>
+    <% if user_signed_in? %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <%# 仮でルートパスに飛ばす %>
         <%# 本来はToDo一覧ページに飛ばしたい %>
-        <li><strong><%= link_to current_user.username, root_path %></strong></li>
+        <li><%= link_to current_user.username, root_path %></li>
         <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete } %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'ログアウトしてよろしいですか？' } %></li>
       </ul>
     </nav>
     <% else %>
       <ul class="nav navbar-nav navbar-right navbar-expand-md navbar-light bg-light">
-        <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+        <li><%= link_to '新規登録', new_user_registration_path %></li>
         <li><%= link_to 'ログイン', new_user_session_path %></li>
       </ul>
     <% end %>
