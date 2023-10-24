@@ -57,8 +57,8 @@ Style/GuardClause:
   Enabled: false
 
 # 文字列をシングルクォートで囲む
-StringLiterals:
-  Enabled: true
+# StringLiterals:
+  # Enabled: true
 
 # シンボルによる配列の%記法のチェック
 Style/SymbolArray:
