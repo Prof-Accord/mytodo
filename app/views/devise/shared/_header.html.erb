@@ -1,11 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
+    <%# 本来はタスク一覧ページに飛ばしたい %>
     <%= link_to 'Mytodo', root_path, id: "logo" %>
     <% if user_signed_in? %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <%# 仮でルートパスに飛ばす %>
-        <%# 本来はToDo一覧ページに飛ばしたい %>
+        <%# 本来はユーザー情報ページに飛ばしたい %>
         <li><%= link_to current_user.username, root_path %></li>
         <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'ログアウトしてよろしいですか？' } %></li>
