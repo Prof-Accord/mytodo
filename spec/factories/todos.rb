@@ -12,11 +12,4 @@ FactoryBot.define do
     content { "most_recent" }
     created_at { Time.zone.now }
   end
-
-  factory :potato, class: Todo do
-    association :user
-    title { "potato" }
-    content { "potato" }
-    created_at { 2.years.ago }
-  end
 end

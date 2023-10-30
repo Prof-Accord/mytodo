@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Todo, type: :model do
   describe "Todo" do
-    let!(:user) { create(:user) }
+    let(:user) { create(:user) }
     let!(:todo) { create(:todo) }
     let!(:most_recent) { create(:most_recent) }
 
@@ -18,7 +18,8 @@ RSpec.describe Todo, type: :model do
         expect(most_recent).to eq(Todo.first)
       end
       it "ユーザーと紐づけられていること" do
-        expect{ user.destroy }.to change(Todo, :count).from(2).to(0)
+        user.todos.create(title: 'テストタイトル', content: 'テスト本文')
+        expect{ user.destroy }.to change(Todo, :count).from(3).to(2)
       end
     end
   end

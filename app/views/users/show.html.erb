@@ -1,0 +1,12 @@
+<% provide(:title, @user.username) %>
+<h1>My page (<%= @user.username %>)</h1>
+<ul>
+  <% @todos.each do |t| %>
+    <li>
+      <%= t.title %>
+    </li>
+    <li>
+      <%= t.content %>
+    </li>
+  <% end %>
+</ul>
