@@ -1,8 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%# 本来はタスク一覧ページに飛ばしたい %>
-    <%= link_to 'Mytodo', root_path, id: "logo" %>
     <% if user_signed_in? %>
+    <%= link_to 'Mytodo', users_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <%# 仮でルートパスに飛ばす %>
@@ -13,6 +13,7 @@
       </ul>
     </nav>
     <% else %>
+    <%= link_to 'Mytodo', root_path, id: "logo" %>
       <ul class="nav navbar-nav navbar-right navbar-expand-md navbar-light bg-light">
         <li><%= link_to '新規登録', new_user_registration_path %></li>
         <li><%= link_to 'ログイン', new_user_session_path %></li>

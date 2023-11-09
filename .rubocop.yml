@@ -94,3 +94,9 @@ Rails/PluralizationGrammar:
 
 Layout/SpaceBeforeBlockBraces:
   Enabled: false
+
+Style/ColonMethodCall:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: false

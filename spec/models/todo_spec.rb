@@ -19,7 +19,7 @@ RSpec.describe Todo, type: :model do
       end
       it "ユーザーと紐づけられていること" do
         user.todos.create(title: 'テストタイトル', content: 'テスト本文')
-        expect{ user.destroy }.to change(Todo, :count).from(3).to(2)
+        expect{ user.destroy }.to change(Todo, :count).by(-1)
       end
     end
   end

@@ -1,0 +1,8 @@
+<li id="todo-<%= todo.id %>">
+  <%= link_to gravatar_for(todo.user, size: 50), todo.user %>
+  <span class="user"><%= link_to todo.title, todo.user %></span>
+  <span class="content"><%= todo.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(todo.created_at) %> ago.
+  </span>
+</li>
