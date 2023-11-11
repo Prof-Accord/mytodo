@@ -22,7 +22,7 @@ end
   User.all.each do |user|
     user.todos.create!(
       title: Faker::Book.title,
-      content: Faker::Movie.quote,
+      content: Faker::Lorem.paragraph,
     )
   end
 end
