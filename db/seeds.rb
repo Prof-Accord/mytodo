@@ -8,7 +8,7 @@
 
 User.create(username: "渡邉　将太朗", email: "watanabe@gmail.com", password: "foobar", password_confirmation: "foobar")
 
-5.times do |n|
+50.times do |n|
   User.create!(
     # email: "test#{n + 1}@test.com",
     email: Faker::Internet.email,
@@ -18,7 +18,7 @@ User.create(username: "渡邉　将太朗", email: "watanabe@gmail.com", passwor
   )
 end
 
-5.times do |n|
+50.times do |n|
   User.all.each do |user|
     user.todos.create!(
       title: Faker::Book.title,
