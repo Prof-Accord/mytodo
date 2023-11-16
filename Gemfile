@@ -13,6 +13,8 @@ gem 'bootstrap-sass'
 gem 'sassc-rails'
 gem 'devise'
 gem 'faker'
+gem 'bootstrap4-kaminari-views'
+gem 'kaminari'
 
 group :development, :test do
   gem 'sqlite3'
