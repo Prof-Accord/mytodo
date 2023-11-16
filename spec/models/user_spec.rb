@@ -48,6 +48,12 @@ RSpec.describe User, type: :model do
         user.save
         expect(duplicate_user).to be_invalid
       end
+      it 'emailが小文字で保存されること' do
+        mixed_case_email = "Foo@ExAMPle.CoM"
+        user.email = mixed_case_email
+        user.save
+        expect(mixed_case_email.downcase).to eq user.reload.email
+      end
     end
 
     context 'passwordのバリデーション' do
