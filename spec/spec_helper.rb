@@ -96,4 +96,8 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
   # config.include FactoryBot::Syntax::Methods
+  # it内で複数のexpectを記述できるようになる設定
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures] = true
+  end
 end
