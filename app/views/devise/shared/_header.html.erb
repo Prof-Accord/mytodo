@@ -15,8 +15,8 @@
     <% else %>
     <%= link_to 'Mytodo', root_path, id: "logo" %>
       <ul class="nav navbar-nav navbar-right navbar-expand-md navbar-light bg-light">
-        <li><%= link_to '新規登録', new_user_registration_path %></li>
-        <li><%= link_to 'ログイン', new_user_session_path %></li>
+        <li><%= link_to '新規登録', signup_path %></li>
+        <li><%= link_to 'ログイン', signin_path %></li>
       </ul>
     <% end %>
     </nav>

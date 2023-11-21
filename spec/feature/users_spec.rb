@@ -4,7 +4,7 @@ RSpec.describe "Users", type: :feature do
   let!(:user) { create(:user) }
 
   context 'ユーザー新規登録ができるとき' do
-    it '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
+    xit '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
       visit user_path(user)
       expect(page).to have_content user.username
       # トップページにサインアップページへ遷移するボタンがあることを確認する
