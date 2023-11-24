@@ -16,8 +16,8 @@ class UsersController < ApplicationController
 
   def move_to_signed_in
     unless user_signed_in?
-      # サインインしていないユーザーはログインページが表示される
-      redirect_to root_path
+      # サインインしていないユーザーはサインインページが表示される
+      redirect_to signin_path
     end
   end
 end
