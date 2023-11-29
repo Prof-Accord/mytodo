@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Users", type: :feature do
   before do
-    @user = FactoryBot.create(:user)
+    @user = create(:user)
   end
   describe "ルートパス" do
     context "ログインしていない時" do
@@ -23,8 +23,8 @@ RSpec.describe "Users", type: :feature do
         expect(page).to have_link 'Mytodo', href: users_path, count: 1
         expect(page).to have_link 'プロフィール変更', href: edit_user_registration_path, count: 1
         expect(page).to have_link 'ログアウト', href: destroy_user_session_path, count: 1
-        # expect(page).to have_button 'メールアドレスまたは電話番号でログイン'
-        # expect(page).to have_button 'Mytodoユーザー登録'
+        expect(page).to have_button 'メールアドレスまたは電話番号でログイン'
+        expect(page).to have_button 'Mytodoユーザー登録'
       end
     end
   end

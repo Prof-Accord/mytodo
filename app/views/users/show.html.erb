@@ -12,7 +12,7 @@
     <% if @user.todos.any? %>
       <h3>Todos (<%= @user.todos.count %>)</h3>
       <ol class="todos">
-         <%= render partial: "todo", collection: @todos, as: :todo %>
+        <%= render partial: "todo", collection: @todos, as: :todo %>
       </ol>
       <%= paginate @todos %>
     <% end %>
