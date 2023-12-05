@@ -10,7 +10,7 @@
   </aside>
   <div class="col-md-8">
     <% if @user.todos.any? %>
-      <h3>Todos (<%= @user.todos.count %>)</h3>
+      <h3>Todo一覧 (<%= @user.todos.count %>)</h3>
       <ol class="todos">
         <%= render partial: "todo", collection: @todos, as: :todo %>
       </ol>
