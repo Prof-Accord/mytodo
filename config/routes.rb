@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get  'static_pages/about'
   get  'static_pages/help'
   resources :users, only: [:index, :show]
+  resources :todos, only: [:create, :destroy]
   devise_scope :user do
     get 'signup', to: 'devise/registrations#new', as: :signup
     get 'signin', to: 'devise/sessions#new', as: :signin

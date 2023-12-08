@@ -47,7 +47,7 @@ h2 {
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
   color: #777;
 }
 
@@ -111,5 +111,30 @@ header {
 /* Todos */
 .todos {
   list-style: none;
-  padding: 0;
+  padding: 0px;
+  li {
+    margin-top: 0px;
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    img {
+      display: block;
+      // padding: 20px;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+  }
+  .gravatar {
+    float: left;
+    // margin-right: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
 }

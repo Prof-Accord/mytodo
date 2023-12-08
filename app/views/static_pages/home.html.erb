@@ -1,15 +1,28 @@
-<h1>Mytodo</h1>
-<h2>
-  MytodoはシンプルなToDo管理アプリです。詳しくは
-  <a href='/static_pages/about'>こちら</a>
-</h2>
+<% if user_signed_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <h1>Mytodo</h1>
+  <h2>
+    MytodoはシンプルなToDo管理アプリです。詳しくは
+    <a href='/static_pages/about'>こちら</a>
+  </h2>
 
-<h4>すでにユーザー登録されている方</h4>
-<div>
-  <%= button_to 'メールアドレスまたは電話番号でログイン', signin_path, { method: :get, class: 'btn btn-lg btn-primary'} %>
-</div>
+  <h4>すでにユーザー登録されている方</h4>
+  <div>
+    <%= button_to 'メールアドレスまたは電話番号でログイン', signin_path, { method: :get, class: 'btn btn-lg btn-primary'} %>
+  </div>
 
-<h4>初めてご利用の方</h4>
-<div>
-  <%= button_to 'Mytodoユーザー登録', signup_path, { method: :get, class: 'btn btn-lg btn-primary'} %>
-</div>
+  <h4>初めてご利用の方</h4>
+  <div>
+    <%= button_to 'Mytodoユーザー登録', signup_path, { method: :get, class: 'btn btn-lg btn-primary'} %>
+  </div>
+<% end %>
