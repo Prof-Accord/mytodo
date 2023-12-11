@@ -4,5 +4,8 @@
   <span class="content"><%= todo.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(todo.created_at) %> ago.
+    <% if current_user?(user)%>
+      <%= link_to "delete", todo, data: {"turbo-method": :delete, turbo_confirm: "本当によろしいですか？"  } %>
+    <% end%>
   </span>
 </li>
